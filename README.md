@@ -36,4 +36,23 @@ Once the datasets are downloaded, the folder structures should look like these:
 We just use these for inference processing.
 
 ### 2. Inference on VTION-HD
+Run the following command, checkpoints will be automatically downloaded from HuggingFace.
+```
+$env:CUDA_VISIBLE_DEVICES = "0"
+python inference.py `
+    --dataset_name vitonhd `
+    --data_root_path "C:\Users\ADMIN\CatVTON\VITON-HD" `
+    --output_dir "C:\Users\ADMIN\CatVTON\output" `
+    --dataloader_num_workers 8 `
+    --batch_size 8 `
+    --seed 555 `
+    --mixed_precision fp16 `
+    --allow_tf32 `
+    --repaint `
+    --eval_pair
+```
+INPUT:
+
+OUTPUT:
+
 
